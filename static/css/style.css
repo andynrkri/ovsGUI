@@ -1,0 +1,52 @@
+img {
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 3px #ccc;
+    -moz-box-shadow: 8px 8px 3px #ccc;
+    -webkit-box-shadow: 8px 8px 3px #ccc;
+}
+
+ul.tree li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.tree li ul {
+    display: none;
+}
+
+ul.tree li.open > ul {
+    display: block;
+}
+
+ul.tree li a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+ul.tree li a:before {
+    height: 1em;
+    padding: 0 .1em;
+    font-size: .8em;
+    display: block;
+    position: absolute;
+    left: -1.3em;
+    top: .2em;
+}
+
+ul.tree li > a:not(:last-child):before {
+    content: '+';
+}
+
+ul.tree li.open > a:not(:last-child):before {
+    content: '-';
+}
+footer {
+    background-color: steelblue;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+#foot {
+    padding: 5px 5px;
+    color: white;
+}

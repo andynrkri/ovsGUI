@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="width:800px; margin:0 auto;">
+{#        <form method="post" action="/">#}
+{#            <input type="text" name="command_box"/>#}
+{#            <input type="submit" name="Execute">#}
+{#        </form>#}
+        {% if request.method=='POST' %}
+            {% for line in out.splitlines() %}
+                <h5>{{ line.decode('utf-8') }}</h5>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
