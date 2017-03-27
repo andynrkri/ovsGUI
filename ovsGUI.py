@@ -20,7 +20,7 @@ def enter(firstparam, secondparam):
     if out == None:
         out = p.communicate()[1]
     context = {'out': out}
-    return command
+    return render_template("output.html", command=command)
 
 
 @app.route('/getbridges')
