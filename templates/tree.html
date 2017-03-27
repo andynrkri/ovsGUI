@@ -7,17 +7,73 @@
                 <ul>
                     <li><a href="#!">add flow</a>
                         <ul>
-                            <li>
-                                <p>
-                                    <button onclick="myFunction()"> Check bridges</button>
-                                </p>
-                                <p id="demo"></p>
-                                <form method="post" action="/ovs-ofctl/addflow">
-                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
-                                    <p>Matching pattern:<input type="text" name="input_two"></p>
-                                    <p>Enter flow: <input type="text" name="input_three"/></p>
-                                    <p><input type="submit"/></p>
-                                </form>
+                            <li><a href="#!">select layer</a>
+                                <ul>
+                                    <li><a href="#!">L1</a>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <button onclick="myFunction1()"> Check bridges</button>
+                                                </p>
+                                                <p id="demo1"></p>
+                                                <form method="post" action="/ovs-ofctl/addflow">
+                                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
+                                                    <p>Matching pattern:<input type="text" name="input_two"></p>
+                                                    <p>Enter flow: <input type="text" name="input_three"/></p>
+                                                    <p><input type="submit"/></p>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#!">L2</a>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <button onclick="myFunction2()"> Check bridges</button>
+                                                </p>
+                                                <p id="demo2"></p>
+                                                <form method="post" action="/ovs-ofctl/addflow">
+                                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
+                                                    <p>Matching pattern:<input type="text" name="input_two"></p>
+                                                    <p>Enter flow: <input type="text" name="input_three"/></p>
+                                                    <p><input type="submit"/></p>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#!">L3</a>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <button onclick="myFunction3()"> Check bridges</button>
+                                                </p>
+                                                <p id="demo3"></p>
+                                                <form method="post" action="/ovs-ofctl/addflow">
+                                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
+                                                    <p>Matching pattern:<input type="text" name="input_two"></p>
+                                                    <p>Enter flow: <input type="text" name="input_three"/></p>
+                                                    <p><input type="submit"/></p>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#!">L4</a>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <button onclick="myFunction4()"> Check bridges</button>
+                                                </p>
+                                                <p id="demo4"></p>
+                                                <form method="post" action="/ovs-ofctl/addflow">
+                                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
+                                                    <p>Matching pattern:<input type="text" name="input_two"></p>
+                                                    <p>Enter flow: <input type="text" name="input_three"/></p>
+                                                    <p><input type="submit"/></p>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -97,4 +153,3 @@
         </ul>
     </h3>
 {% endblock %}
-
