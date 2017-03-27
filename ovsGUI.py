@@ -9,13 +9,21 @@ def first():
     return render_template("tree.html")
 
 
-@app.route('/enter', methods=['POST'])
-def enter():
-    command = request.form.get('command_box')
+@app.route('/<firstparam>/<secondparam>', methods=['POST'])
+def enter(firstparam, secondparam):
+    command = request.form.get('input_one')
+    flow = request.form.get('input_two')
+    command =firstparam+" "+secondparam+" "+ command + " " + flow
     p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     out = p.communicate()[0]
+    if out == None:
+        out = p.communicate()[1]
     context = {'out': out}
-    return render_template('home.html', **context)
+    return command
+
+@app.route('/getbridges')
+def getbridges():
+    return "here are the bridges"
 
 
 if __name__ == '__main__':

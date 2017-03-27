@@ -3,26 +3,26 @@
 {% block content %}
     <h3>
         <ul class="tree">
-            <li><a href="#!">Add Flow</a>
-
+            <li><a href="#!">ovs-ofctl</a>
                 <ul>
-                    <li><a href="#!">choice A</a>
+                    <li><a href="#!">add flow</a>
                         <ul>
-                            <li><a href="#">Sub-choice 1</a>
-                                <ul>
-                                    <li><a href="#">
-                                        <form>
-                                            Enter port:<input type="text"/>
-                                            <input type="submit"/>
-                                        </form>
-                                    </a></li>
-                                </ul>
+                            <li>
+                                <form method="post" action="/ovs-ofctl/addflow">
+                                    <p>
+                                        <button type="button" name="Check available bridges" onclick="myFunction">Check
+                                            bridges
+                                        </button>
+                                    </p>
+                                    <p id="demo"></p>
+                                    <p>Enter bridge: <input type="text" name="input_one"/></p>
+                                    <p>Enter flow: <input type="text" name="input_two"/></p>
+                                    <p><input type="submit"/></p>
+                                </form>
                             </li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#!">choice B</a>
+                    <li><a href="#!">add flows</a>
                         <ul>
                             <li><a href="#">Sub-choice 1</a></li>
                             <li><a href="#">Sub-choice 2</a></li>
@@ -137,3 +137,4 @@
         </ul>
     </h3>
 {% endblock %}
+
