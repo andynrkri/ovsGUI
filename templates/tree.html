@@ -8,15 +8,14 @@
                     <li><a href="#!">add flow</a>
                         <ul>
                             <li>
+                                <p>
+                                    <button onclick="myFunction()"> Check bridges</button>
+                                </p>
+                                <p id="demo"></p>
                                 <form method="post" action="/ovs-ofctl/addflow">
-                                    <p>
-                                        <button type="button" name="Check available bridges" onclick="myFunction">Check
-                                            bridges
-                                        </button>
-                                    </p>
-                                    <p id="demo"></p>
                                     <p>Enter bridge: <input type="text" name="input_one"/></p>
-                                    <p>Enter flow: <input type="text" name="input_two"/></p>
+                                    <p>Matching pattern:<input type="text" name="input_two"></p>
+                                    <p>Enter flow: <input type="text" name="input_three"/></p>
                                     <p><input type="submit"/></p>
                                 </form>
                             </li>
@@ -53,7 +52,7 @@
                 </ul>
             </li>
             <p></p>
-            <li><a href="#!">Delete Flow</a>
+            <li><a href="#!">ovs-vsctl</a>
 
                 <ul>
                     <li><a href="#!">choice A</a>
@@ -94,46 +93,7 @@
                 </ul>
             </li>
             <p></p>
-            <li><a href="#!">Dump Flow</a>
-                <p></p>
-                <ul>
-                    <li><a href="#!">choice A</a>
-                        <ul>
-                            <li><a href="#">Sub-choice 1</a></li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#!">choice B</a>
-                        <ul>
-                            <li><a href="#">Sub-choice 1</a></li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#!">choice C</a>
-                        <ul>
-                            <li><a href="#">Sub-choice 1</a></li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#!">choice D</a>
-                        <ul>
-                            <li><a href="#">Sub-choice 1</a></li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#!">choice E</a>
-                        <ul>
-                            <li><a href="#">Sub-choice 1</a></li>
-                            <li><a href="#">Sub-choice 2</a></li>
-                            <li><a href="#">Sub-choice 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+
         </ul>
     </h3>
 {% endblock %}

@@ -12,8 +12,9 @@ def first():
 @app.route('/<firstparam>/<secondparam>', methods=['POST'])
 def enter(firstparam, secondparam):
     command = request.form.get('input_one')
-    flow = request.form.get('input_two')
-    command =firstparam+" "+secondparam+" "+ command + " " + flow
+    pattern = request.form.get('input_two')
+    flow = request.form.get('input_three')
+    command = firstparam + " " + secondparam + " " + command + " " + pattern + " " + flow
     p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     out = p.communicate()[0]
     if out == None:
@@ -21,9 +22,10 @@ def enter(firstparam, secondparam):
     context = {'out': out}
     return command
 
+
 @app.route('/getbridges')
 def getbridges():
-    return "here are the bridges"
+    return "br0 br1 br3"
 
 
 if __name__ == '__main__':
