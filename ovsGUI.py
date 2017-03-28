@@ -17,14 +17,15 @@ def enter(firstparam, secondparam):
     command = [firstparam, secondparam, command, pattern, flow]
     out = get_output(command)
     context = {'out': out}
-    return render_template("output.html", command=command)
+    return render_template("output.html", command=" ".join(command))
 
 
 def get_output(command):
-    p = subprocess.Popen(command, stdout=subprocess.PIPE)
+    p = subprocess.Popen(" ".join(command), stdout=subprocess.PIPE, shell=True)
     out = p.communicate()[0]
     if out == None:
         out = p.communicate()[1]
+    return out
 
 
 @app.route('/getbridges')
