@@ -14,13 +14,17 @@ def enter(firstparam, secondparam):
     command = request.form.get('input_one')
     pattern = request.form.get('input_two')
     flow = request.form.get('input_three')
-    command = firstparam + " " + secondparam + " " + command + " " + pattern + " " + flow
-    p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+    command = [firstparam, secondparam, command, pattern, flow]
+    out = get_output(command)
+    context = {'out': out}
+    return render_template("output.html", command=command)
+
+
+def get_output(command):
+    p = subprocess.Popen(command, stdout=subprocess.PIPE)
     out = p.communicate()[0]
     if out == None:
         out = p.communicate()[1]
-    context = {'out': out}
-    return render_template("output.html", command=command)
 
 
 @app.route('/getbridges')
